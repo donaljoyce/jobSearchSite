@@ -7,26 +7,26 @@
     "Year":"3",
     "duration":"5",
     "requirements":"Good in HTML,CSS,Javascript",
-    "description":"Make atatic web page for a Restaurant"
+    "description":"Make static web page for a Restaurant"
 },{
     "title":"Develop a website",
-    "category":"web development",
+    "category":"App development",
     "type":"remote",
     "location":"Kerala",
     "qualification":"B.Tech/M.C.A",
     "Year":"3",
     "duration":"5",
     "requirements":"Good in HTML,CSS,Javascript",
-    "description":"Make atatic web page for a Restaurant"
+    "description":"Make App for a Textile Shop"
 },
 {
     "title":"Develop a website",
     "category":"web development",
     "type":"remote",
-    "location":"Kerala",
-    "qualification":"B.Tech/M.C.A",
+    "location":"Karnataka",
+    "qualification":"M.C.A",
     "Year":"3",
     "duration":"5",
     "requirements":"Good in HTML,CSS,Javascript",
-    "description":"Make atatic web page for a Restaurant"
+    "description":"Make web page for a Project"
 }]
