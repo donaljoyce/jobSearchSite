@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>
+    User Profile
+</title>
+<body style="background-color: rgb(231, 240, 238);">
+    <h1>Welcome User</h1>
+    <!--This is the link which directs us to the Job post form page (jobPost.html) , where user can post a job-->
+
+    <a  href="./jobPost.html" 
+    style="height:50px; width:300px; color:rgb(47, 10, 157);text-align: center; ">
+    <h2 style="border: 1px solid black;">POST A JOB</h2></a>
+
+    <h2>Posted Jobs...</h2>
+    <div id="post"></div>
+    <!--Below is the javascript code to get previously posted jobs from sever and display it to the user-->
+
+    <script>
+        fetch("./demoData.json").then(response=>response.json())
+        .then(data=>{
+            for(i=0;i<data.length;i++){
+                var jpost=document.createElement("div")
+                var tag=document.createElement("p");
+                var text1=document.createTextNode(data[i]['title'])
+                tag.appendChild(text1);
+                console.log(tag)
+                tag.appendChild(document.createElement('br'));
+                var text2=document.createTextNode("Category:"+data[i]['category'])
+                tag.appendChild(text2);
+                tag.appendChild(document.createElement('br'));
+                var text3=document.createTextNode("work type:"+data[i]['type'])
+                tag.appendChild(text3);
+                tag.appendChild(document.createElement('br'));
+                var text4=document.createTextNode("Location:"+data[i]['location'])
+                tag.appendChild(text4);
+                tag.appendChild(document.createElement('br'));
+                var text5=document.createTextNode(data[i]["description"]);
+                tag.appendChild(text5);
+                tag.appendChild(document.createElement('br'));
+                jpost.appendChild(tag);
+                jpost.setAttribute("style","font-weight:bold;border:2px solid black;border-radius:50px;display:flex;justify-content:center; align-items:center");
+                var element=document.getElementById("post");
+                element.appendChild(jpost);
+            }
+        });
+    </script>
+</body>
