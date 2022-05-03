@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        "names":[{
+            "name":"User1",
+            "qualification":"B.Tech",
+            "year":"3"
+        },{
+            "name":"User2",
+            "qualification":"M.C.A",
+            "year":"2"
+        },{
+            "name":"User3",
+            "qualification":"B.Tech",
+            "year":"4"
+        }]
+    },
+    {
+        "id":2,
+        "names":[{
+            "name":"User1",
+            "qualification":"B.Tech",
+            "year":"3"
+        },{
+            "name":"User2",
+            "qualification":"M.C.A",
+            "year":"2"
+        },{
+            "name":"User3",
+            "qualification":"B.Tech",
+            "year":"4"
+        }]
+    }
+]

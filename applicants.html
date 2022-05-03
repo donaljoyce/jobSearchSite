@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>
+    Applicants
+</title>
+<body>
+    
+    <div id="applicants">
+        <h3>Applicants are...</h3>
+    </div>
+    
+    <script>
+        var urlParams=new URLSearchParams(window.location.search);
+        var id=urlParams.get('id');
+        var flag=0;
+        fetch("./applicants.json").then(response=>response.json())
+        .then(data=>{
+            
+            for(i=0;i<data.length;i++){
+                console.log(id);
+                if(data[i]['id']==id){
+                    flag=1;
+                    for(var j=0;j<data[i]['names'].length;j++){
+                        console.log(data[i]['names']);
+                        var tag=document.createElement("p");
+                        var text1=document.createTextNode("Name:"+data[i]['names'][j]['name']);
+                        tag.appendChild(text1);
+                        tag.appendChild(document.createElement('br'));
+                        var text2=document.createTextNode("Qualification:"+data[i]['names'][j]['qualification']);
+                        tag.appendChild(text2);
+                        tag.appendChild(document.createElement('br'));
+                        var text3=document.createTextNode("Academic Year:"+data[i]['names'][j]['year']);
+                        tag.appendChild(text3);
+                        tag.appendChild(document.createElement('br'));
+                        var app=document.getElementById("applicants");
+                        app.appendChild(tag)
+
+                    }
+                }
+            }
+            if(flag==0){
+            document.getElementById('applicants').innerHTML="No applicants"
+            }
+        }
+        );
+    </script>
+</body>
