@@ -1,4 +1,4 @@
-# jobSearchSite
+# Job Posting Page
 This shows the basic HTML structure code for two pages.
 
 There two HTML Pages: jobPost.HTML and jobProvider.html
