@@ -12,7 +12,7 @@
 
     <h2>Posted Jobs...</h2>
     <div id="post"></div>
-    
+    <!--Javascript code to get previously posted jobs from server and display-->
 
     <script>
         fetch("./demoData.json").then(response=>response.json())
@@ -41,6 +41,9 @@
                 a.appendChild(link);
                 tag.appendChild(a);
                 jpost.appendChild(tag);
+
+                //Here page redirects to show all applicants applied to this particular job
+
                 a.href="./applicants.html?id="+data[i]['id'];
                 jpost.setAttribute("style","font-weight:bold;border:2px solid black;border-radius:50px;display:flex;justify-content:center; align-items:center");
                 var element=document.getElementById("post");
